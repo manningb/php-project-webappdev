@@ -1,0 +1,233 @@
+body {
+     margin: 0;
+     padding: 0;
+     background-color:#e9c46a;
+     font-family: Arial;
+}
+ .main {
+     margin: 80px 50px 20px ;
+     min-height: calc(100vh - 226px);
+}
+ .hidden {
+     display: none;
+}
+ .visible {
+     display: block;
+}
+ #tableRows {
+     display:flex;
+     flex-direction:row;
+     justify-content: space-around;
+}
+ #tableLeft {
+     display:flex;
+     flex-direction:column;
+     width: 45%;
+}
+ #tableRight {
+     display:flex;
+     flex-direction:column;
+     width: 45%;
+}
+ h2 {
+     font-size: 40px;
+     margin-bottom: 0px;
+     color: rgb(255, 255, 255);
+     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+ .clickable {
+     text-align: center;
+     font-size: 25px;
+     cursor: pointer;
+     color: rgb(255, 255, 255);
+     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+     border-bottom: 1px solid #000;
+     line-height: 0.1em;
+     margin: 10px 0 20px;
+     width: 100%;
+}
+ .clickable:hover {
+     color: #e76f51;
+}
+ .line {
+     background:#e9c46a;
+     padding:0 10px;
+}
+ header {
+     display: flex;
+     position: fixed;
+     background-color: rgb(51, 51, 51);
+     height: 50px;
+     top: 0;
+     width: 100%;
+     z-index:1;
+}
+ header h1 {
+     margin: 10px 20px;
+     color: white;
+}
+ header h1 .color {
+     color: #02b8dd;
+}
+ nav {
+     display: flex;
+     align-items: center;
+     margin-left: auto;
+}
+ nav ul {
+     list-style-type: none;
+     display: flex;
+}
+ nav ul li a {
+     display: block;
+     color: white;
+     padding: 0px 16px;
+     text-decoration: none;
+     line-height: 50px;
+     margin: 0px;
+}
+ nav ul li a:hover:not(.active) {
+    background-color: #111;
+}
+ nav ul li a.active {
+    background-color: #4ca0af;
+}
+ nav ul li a.active:hover {
+    background-color: #3e818d;
+}
+ a {
+     text-decoration: none;
+}
+ header > input, header > label {
+     display: none;
+}
+ header > label {
+     color: #09c;
+     cursor: pointer;
+}
+ @media only screen and (max-width: 600px) {
+     nav ul {
+         align-items: center;
+         flex-direction: column;
+    }
+     nav ul li {
+         display: block;
+         width: 100%;
+         text-align: center;
+         background-color: rgb(51, 51, 51);
+    }
+     nav ul li a {
+         text-align: center;
+         font-size: 24px;
+    }
+     nav {
+         margin-top: 35px;
+         flex-direction: column;
+    }
+     header > label {
+         background-color: #ffffff00;
+        /* Green */
+         border: none;
+         color: white;
+         text-align: center;
+         text-decoration: none;
+         font-size: 34px;
+         display: inline;
+         position: absolute;
+         right: 20px;
+    }
+     header > input:checked + nav ul{
+         display: none;
+    }
+}
+/* table styling */
+ th, td {
+     padding: 12px 15px;
+}
+ tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+}
+ tr:last-of-type {
+     border-bottom: 2px solid cadetblue;
+}
+ tr {
+     background-color: #ffffff;
+     border-bottom: 1px solid #dddddd;
+}
+ .prodLine > table{
+     overflow-y:scroll;
+     max-height:600px;
+     overflow:auto;
+}
+ table {
+     border-collapse: collapse;
+     margin: 25px 0;
+     font-size: 0.9em;
+     font-family: sans-serif;
+     min-width: 400px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+ thead tr {
+     background-color:rgb(41, 159, 163);
+     color: #ffffff;
+     text-align: left;
+}
+ .prodLine thead > tr > th{
+     position: sticky;
+     top: 0;
+    /* Don't forget this, required for the stickiness */
+     background-color:rgb(41, 159, 163);
+}
+ footer {
+     height:120px;
+     text-align: center;
+     padding: 3px;
+     background-color: #333333;
+     color: white;
+}
+ footer p > a {
+     color:#e76f51;
+}
+ td {
+     text-align: center;
+}
+ td > a {
+     background-color:#2a9d8f;
+     color: white;
+     padding: 2.45%;
+     text-decoration: none;
+     text-transform: uppercase;
+}
+ td > a:hover {
+     background-color: #39cfbe;
+     cursor: pointer;
+}
+ a:active {
+     box-shadow: none;
+     top: 5px;
+}
+ .center {
+     text-align:center;
+     border-radius: 10px;
+     background-color: rgb(245, 218, 154);
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     padding: 10px;
+}
+ .center h2 {
+     font-size: 100px;
+}
+ #refresh {
+     background-color: rgb(2,184,221);
+     border-radius: 10px;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     display: inline-block;
+     font-size: 16px;
+}
+ #refresh:hover {
+     cursor: pointer;
+}
